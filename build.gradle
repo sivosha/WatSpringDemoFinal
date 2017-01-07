@@ -7,10 +7,12 @@ buildscript {
 		maven { url "https://repo.spring.io/plugins-snapshot" }
 		maven { url "https://repo.spring.io/snapshot" }
 		maven { url "https://repo.spring.io/milestone" }
+		maven { url "https://repo1.maven.org/maven2" }
 	}
 	dependencies {
 	classpath "io.spring.gradle:dependency-management-plugin:0.6.0.BUILD-SNAPSHOT"
 	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+	classpath("org.springframework.security:spring-security-openid:4.2.1.RELEASE")
 	}
 }
 
@@ -38,6 +40,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.security:spring-security-openid:4.2.1.RELEASE')
 //we will use web-jars project to allow our project to import the classes
 	compile("org.webjars:jquery:2.1.4")
 	compile("org.webjars:bootstrap:3.3.4")
